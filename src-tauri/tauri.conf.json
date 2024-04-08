@@ -1,0 +1,70 @@
+{
+    "$schema": "../node_modules/@tauri-apps/cli/schema.json",
+    "build": {
+        "beforeBuildCommand": "npm run build",
+        "beforeDevCommand": "npm run dev",
+        "devPath": "http://localhost:5173",
+        "distDir": "../src"
+    },
+    "package": {
+        "productName": "image-converter",
+        "version": "0.1.0"
+    },
+    "tauri": {
+        "allowlist": {
+            "dialog": {
+                "all": false,
+                "ask": false,
+                "confirm": false,
+                "message": false,
+                "open": true,
+                "save": false
+            },
+            "all": false
+        },
+        "bundle": {
+            "active": true,
+            "category": "DeveloperTool",
+            "copyright": "",
+            "deb": {
+                "depends": []
+            },
+            "externalBin": [],
+            "icon": [
+                "icons/favicon.ico"
+            ],
+            "identifier": "com.fred.image-converter",
+            "longDescription": "",
+            "macOS": {
+                "entitlements": null,
+                "exceptionDomain": "",
+                "frameworks": [],
+                "providerShortName": null,
+                "signingIdentity": null
+            },
+            "resources": [],
+            "shortDescription": "",
+            "targets": "all",
+            "windows": {
+                "certificateThumbprint": null,
+                "digestAlgorithm": "sha256",
+                "timestampUrl": ""
+            }
+        },
+        "security": {
+            "csp": null
+        },
+        "updater": {
+            "active": false
+        },
+        "windows": [
+            {
+                "fullscreen": false,
+                "height": 600,
+                "resizable": true,
+                "title": "Image Format Converter",
+                "width": 800
+            }
+        ]
+    }
+}
